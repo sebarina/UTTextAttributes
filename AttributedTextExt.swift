@@ -8,23 +8,23 @@
 
 import Foundation
 
-extension NSRange {
-    init(_ range: Range<Int>) {
+public extension NSRange {
+    public init(_ range: Range<Int>) {
         self = NSRange(location: range.first ?? 0, length: range.count)
     }
     
-    init(_ string: NSString) {
+    public init(_ string: NSString) {
         self = NSRange(location: 0, length: string.length)
     }
 }
 
-extension NSAttributedString {
+public extension NSAttributedString {
     public convenience init(string: String, attributes: UTTextAttributes? = nil) {
         self.init(string: string, attributes: attributes?.dictionary)
     }
 }
 
-extension NSMutableAttributedString {
+public extension NSMutableAttributedString {
     
     public func setAttributes(attributes: UTTextAttributes) {
         setAttributes(attributes, range: NSRange(mutableString))
