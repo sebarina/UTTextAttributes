@@ -39,8 +39,8 @@ public class UTTextAttributes {
         }
     }
     
-    public func underline(style: NSUnderlineStyle, color: UIColor) {
-        dictionary[NSUnderlineStyleAttributeName] = NSNumber.init(integer: style.rawValue)
+    public func underline(style: NSNumber, color: UIColor) {
+        dictionary[NSUnderlineStyleAttributeName] = style//NSNumber.init(integer: style.rawValue)
         dictionary[NSUnderlineColorAttributeName] = color
     }
     
