@@ -40,7 +40,7 @@ public class UTTextAttributes {
     }
     
     public func underline(style: NSUnderlineStyle, color: UIColor) {
-        dictionary[NSUnderlineStyleAttributeName] = style
+        dictionary[NSUnderlineStyleAttributeName] = NSNumber(integer: style.rawValue)
         dictionary[NSUnderlineColorAttributeName] = color
     }
     
@@ -57,7 +57,7 @@ public class UTTextAttributes {
         dictionary[NSShadowAttributeName] = shadow
     }
     
-    public var baselineIndent : CGFloat  {
+    public var baselineIndent : CGFloat = 0  {
         didSet {
             dictionary[NSBaselineOffsetAttributeName] = baselineIndent as NSNumber
         }
