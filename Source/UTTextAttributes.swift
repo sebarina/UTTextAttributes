@@ -40,7 +40,7 @@ public class UTTextAttributes {
     }
     
     public func underline(style: NSUnderlineStyle, color: UIColor) {
-        dictionary[NSUnderlineStyleAttributeName] = NSNumber(integer: style.rawValue)
+        dictionary[NSUnderlineStyleAttributeName] = NSNumber(long: style.rawValue)
         dictionary[NSUnderlineColorAttributeName] = color
     }
     
@@ -74,7 +74,7 @@ public class UTTextAttributes {
     }
     
     public func addTextEffect() {
-        dictionary[NSTextEffectAttributeName] = NSTextEffectLetterpressStyle
+        dictionary[NSTextEffectAttributeName] = NSString(string: NSTextEffectLetterpressStyle)
     }
     
     public func attachment(data: NSData?, type: String) {
